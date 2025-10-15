@@ -1,0 +1,301 @@
+---
+title: "Preeclampsia"
+subtitle: "First-trimester PAPP-A levels: influence of genetically determined ancestry and implications for preeclampsia prediction"
+authors:
+  - name: Dr Omar B Forge Risk
+    affiliation: King's College London (Wellcome Trust), Imperial College London (NIHR)
+    roles: Wellcome Trust CREATE Fellow \n NIHR Academic Clinical Fellow
+    corresponding: Omar.Risk@kcl.ac.uk
+format:
+  revealjs:
+      css: style.css
+theme: serif
+bibliography: references.bib
+---
+
+```{r}
+#| label: load-packages
+#| include: false
+library(tidyverse)
+library(gt)
+```
+
+## What's the scale of the problem?
+
+MMR per 100,000 births. Population attributable fraction of [preeclampsia]{style="color:purple;"} and [haemorrhage]{style="color:red;"}.[^1]
+
+[^1]: @knight2025; @hollier2024; @shafiq2024
+
+::::::::: {.columns style="text-align:center"}
+:::: {.column width="33%"}
+::: fragment
+![](images/gb.svg){width="25%"}\
+![](images/UK_MMR.svg)
+:::
+::::
+
+:::: {.column width="33%"}
+::: fragment
+![](images/zm.svg){width="25%"}\
+![](images/ZM_MMR.svg)
+:::
+::::
+
+:::: {.column width="33%"}
+::: fragment
+![](images/sl.svg){width="25%"}\
+![](images/SL_MMR.svg)
+:::
+::::
+:::::::::
+
+## Preeclampsia is predictable
+
+::::::::: {.columns style="text-align:center"}
+:::: {.column width="33%"}
+::: fragment
+![](images/NICE.png){width="100%"}\
+![](images/gb.svg){width="25%"}\
+![](images/MatFac.svg){width="25%"}\
+Detection rate: 40%
+:::
+::::
+
+:::: {.column width="33%"}
+::: fragment
+![](images/papaya.png){width="50%"}\
+![](images/sl.svg){width="25%"}\
+![](images/MatFac.svg){width="25%"}\
+Detection rate: \~5%
+:::
+::::
+
+:::: {.column width="33%"}
+::: fragment
+![](images/FMF.png){width="100%"}\
+![](images/gb.svg){width="25%"}\
+![](images/MatFac.svg){width="25%"} ![](images/CRADLE.png){width="15%"}![](images/PLGF.png){width="25%"}![](images/UtA.png){width="15%"}\
+Detection rate: 70%
+:::
+::::
+:::::::::
+
+## Preeclampsia is preventable
+
+::::::::: {.columns style="text-align:center"}
+::::: {.column width="50%"}
+::: fragment
+![](images/aspirin.png){width="70%"}
+:::
+
+::: fragment
+![](images/sl.svg){width="25%"} ![](images/zm.svg){width="25%"}\
+Uptake \~ 2%
+:::
+:::::
+
+:::: {.column width="50%"}
+::: fragment
+![](images/aspirin_prevention.png){width="100%"}\
+@rolnik2017
+:::
+::::
+
+::: fragment
+Early prediction enables us to target aspirin to delay severe preeclampsia and save lives.
+:::
+:::::::::
+
+## Biomarkers help, but may require adjustment for ethnicity
+
+:::::::: {.columns style="text-align:center"}
+:::: {.column width="50%"}
+::: fragment
+![](images/plgf_ethnic.png){width="100%"}
+:::
+::::
+
+:::: {.column width="50%"}
+::: fragment
+![](images/plgf_mom_ethnic.png){width="100%"}\
+:::
+::::
+
+::: fragment
+@wright2023
+:::
+::::::::
+
+## West African GDA: independent risk for PE
+
+![](images/GDA_PE.png){width="100%"}\
+@conti-ramsden2024
+
+## Research questions
+
+::: fragment
+-   Is there an independent association between GDA and levels of an angiogenic biomarker (PAPP-A)?
+:::
+
+::: fragment
+-   If so, which ancestry group(s)?
+:::
+
+::: fragment
+-   Can adjustment for GDA offer improved predictive utility for preeclampsia versus ethnicity alone?
+:::
+
+## Methods: sample
+
+-   Case-Control sample (n = 5,207 after genomic QC)
+-   ![](images/FMF.png){width="10%"} Harris Birthright Cohort
+-   First trimester recruitment with follow-up to delivery
+-   Case definition: early onset preeclampsia (n = 2,127)
+-   Control definition: normotensive (n = 3,080)
+
+## Methods: genomics
+
+:::::: {style="font-size: 70%;"}
+::: fragment
+### Genotyping (Illumina GSA v3)
+
+-   \~700,000 variants optimised for admixed populations
+:::
+
+::: fragment
+### Calling (Illumina GenCall)
+
+ 
+:::
+
+::: fragment
+### QC (Plink 1.9)
+
+-   Sex discordance
+-   Cryptic relatedness
+-   Autosomal SNPs $< 5\%$ missing & MAF $> 1\%$
+-   Population aggregated HWE P-value $> 10^{-4}$
+:::
+::::::
+
+## Methods: genetically determined ancestry
+
+-   Supervised ADMIXTURE v1.3 (1000G reference)
+-   GDA: proportions sum to 1
+-   26 populations (e.g. Yoruba)
+-   5 superpopulations (e.g. African)
+-   African regional populations (e.g. West African)
+
+## Statistical Analysis
+
+:::::: {style="font-size: 70%;"}
+::: fragment
+### Inference & feature selection
+
+-   Inverse probability of selection weighting
+-   Least Absolute Shrinkage and Selection Operator
+:::
+
+::: fragment
+### Adjustment:
+
+-   Unweighted LASSO among controls
+-   $MoM($ PAPP-A $)_i = \frac{y_i}{\hat{y}_i}$
+:::
+
+::: fragment
+### Prediction:
+
+-   Univariate weighted logistic regression
+-   (AU)ROC, bootstrap CI estimation (n = 2000)
+:::
+::::::
+
+## Results: admixture
+
+```{r stacked-bar, fig.cap="**Genetically estimated ancestry proportions among study cohort** (n = 5207).", echo=FALSE, fig.width=8, fig.height=2, out.width='100%'}
+readRDS("../figures_plots/plots/stacked_bar.rds")
+```
+
+## Results: admixture
+
+```{r GDA-scaled-density, fig.cap="**Scaled density of genetically estimated ancestry proportions among study cohort** (n = 5207).", echo=FALSE, fig.width=16, fig.height=8, out.width='100%'}
+readRDS("../figures_plots/plots/density_GDA.rds") + theme(text = element_text(size = 25))
+```
+
+## Results: admixture
+
+```{r sankey, fig.cap="**Sankey plot showing the reclassification of self-reported ethnicity by overall sample proportions of genetic ancestry estimates.**", echo=FALSE, message=FALSE, warnings=FALSE, fig.width=12, fig.height=7, out.width='100%'}
+readRDS("../figures_plots/plots/sankey.rds")
+```
+
+## Results: PAPP-A discrimination
+
+```{r PAPP-A-SRE-GDA, fig.cap="**Density of log10(PAPP-A) level in cases and controls by self reported ethnicity and strata of individual proportion of African superpopulation ancestry.** Red line indicates cutoff defined by a 10% screen positive rate in the overall sample.", echo=FALSE, message=FALSE, warnings=FALSE, fig.width=15, fig.height=7, out.width='100%'}
+readRDS("../figures_plots/plots/PAPP_A_SRE_GDA.rds")
+```
+
+## Results: effects on PAPP-A
+
+```{r inference-PAPP-A-1se, fig.cap="**Estimated OLS effects on log10(PAPP-A) of predictors selected by LASSO regression.**", echo=FALSE, message=FALSE, warnings=FALSE, fig.width=15, fig.height=7, out.width='100%'}
+readRDS("../figures_plots/plots/inference_PAPP_A_1se.rds") + theme(text = element_text(size = 25))
+```
+
+## Results: prediction performance
+
+```{r roc-curves, fig.cap="**Receiver operator curves for the accuracy of preeclampsia prediction by univariate logistic regression of MoM(PAPP-A).**", echo=FALSE, message=FALSE, warnings=FALSE, fig.width=11, fig.height=7}
+readRDS("../figures_plots/plots/roc_curves.rds") + theme(text = element_text(size = 25))
+```
+
+## Results: prediction performance
+
+```{r roc-tests, echo=FALSE, resuls='asis'}
+readRDS("../figures_plots/tables/roc_tests.rds") %>% gt::tab_caption("Incremental comparison of the overall performance of screening for preeclampsia by PAPP-A, adjusted by different features.")
+```
+
+## Results: prediction performance
+
+```{r detection-rates, echo=FALSE, resuls='asis'}
+readRDS("../figures_plots/tables/detection_rates_wide.rds") %>% gt::tab_caption("Performance of fixed-cutoff screening for preeclampsia by PAPP-A, adjusted by different features. Cutoffs are fixed to achieve a screen positive rate of 50% among White women.")
+```
+
+## Thank you
+
+::: {style="font-size: 70%;"}
+### Supervisors:
+
+-   **Dr Antonio de Marvao**
+-   Dr Fran Conti-Ramsden (post-doc. QC & ADMIXTURE)
+
+### Collaborators:
+
+-   Prof Kypros Nicolaides (funding, cohort)
+-   Dr Pirro Hysi (genotype calling)
+:::
+
+::: {style="height:1.2rem"}
+:::
+
+:::::::: {.columns style="text-align:center"}
+::: {.column width="20%"}
+![](images/Imperial.png)
+:::
+
+::: {.column width="20%"}
+![](images/KCL.png)
+:::
+
+::: {.column width="20%"}
+![](images/FMF.png)
+:::
+
+::: {.column width="20%"}
+![](images/CREATE.png)
+:::
+
+::: {.column width="20%"}
+![](images/NIHR.png)
+:::
+::::::::
+
+## References
