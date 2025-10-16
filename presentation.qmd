@@ -146,12 +146,21 @@ Early prediction enables us to target aspirin to delay severe preeclampsia and s
 :::
 
 ## Methods: sample
-
+::: fragment
 -   Case-Control sample (n = 5,207 after genomic QC)
+:::
+::: fragment
 -   ![](images/FMF.png){width="10%"} Harris Birthright Cohort
+:::
+::: fragment
 -   First trimester recruitment with follow-up to delivery
+:::
+::: fragment
 -   Case definition: early onset preeclampsia (n = 2,127)
+:::
+::: fragment
 -   Control definition: normotensive (n = 3,080)
+:::
 
 ## Methods: genomics
 
@@ -180,11 +189,17 @@ Early prediction enables us to target aspirin to delay severe preeclampsia and s
 
 ## Methods: genetically determined ancestry
 
+::: fragment
 -   Supervised ADMIXTURE v1.3 (1000G reference)
+:::
+::: fragment
 -   GDA: proportions sum to 1
+:::
+::: fragment
 -   26 populations (e.g. Yoruba)
 -   5 superpopulations (e.g. African)
 -   African regional populations (e.g. West African)
+:::
 
 ## Statistical Analysis
 
@@ -192,7 +207,7 @@ Early prediction enables us to target aspirin to delay severe preeclampsia and s
 ::: fragment
 ### Inference & feature selection
 
--   Inverse probability of selection weighting
+-   Weighting by inverse probability of selection
 -   Least Absolute Shrinkage and Selection Operator
 :::
 
@@ -258,6 +273,28 @@ readRDS("../figures_plots/tables/roc_tests.rds") %>% gt::tab_caption("Incrementa
 ```{r detection-rates, echo=FALSE, resuls='asis'}
 readRDS("../figures_plots/tables/detection_rates_wide.rds") %>% gt::tab_caption("Performance of fixed-cutoff screening for preeclampsia by PAPP-A, adjusted by different features. Cutoffs are fixed to achieve a screen positive rate of 50% among White women.")
 ```
+
+## Strengths
+
+::: fragment
+![](images/GWAS.png){width="60%"}
+
+@Honigberg2023
+:::
+
+## Limitations
+::: fragment
+-   Ascertainment bias
+:::
+::: fragment
+-   GDA ≈ SRE in this sample (Pearson r = 0.885 \[p \< 0.001\])
+:::
+::: fragment
+-   PAPP-A ≠ PlGF
+:::
+::: fragment
+-   GDA itself is a limited proxy for population structure
+:::
 
 ## Thank you
 
