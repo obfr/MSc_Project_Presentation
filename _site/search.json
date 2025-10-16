@@ -1,0 +1,156 @@
+[
+  {
+    "objectID": "presentation.html#whats-the-scale-of-the-problem",
+    "href": "presentation.html#whats-the-scale-of-the-problem",
+    "title": "Preeclampsia",
+    "section": "What’s the scale of the problem?",
+    "text": "What’s the scale of the problem?\nMMR per 100,000 births. Population attributable fraction of preeclampsia and haemorrhage.1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKnight et al. (2025); Hollier et al. (2024); Shafiq et al. (2024)"
+  },
+  {
+    "objectID": "presentation.html#preeclampsia-is-predictable",
+    "href": "presentation.html#preeclampsia-is-predictable",
+    "title": "Preeclampsia",
+    "section": "Preeclampsia is predictable",
+    "text": "Preeclampsia is predictable\n\n\n\n\n\n\nDetection rate: 40%\n\n\n\n\n\n\nDetection rate: ~5%\n\n\n\n\n\n \nDetection rate: 70%"
+  },
+  {
+    "objectID": "presentation.html#preeclampsia-is-preventable",
+    "href": "presentation.html#preeclampsia-is-preventable",
+    "title": "Preeclampsia",
+    "section": "Preeclampsia is preventable",
+    "text": "Preeclampsia is preventable\n\n\n\n\n\n\n \nUptake ~ 2%\n\n\n\n\nRolnik et al. (2017)\n\n\nEarly prediction enables us to target aspirin to delay severe preeclampsia and save lives."
+  },
+  {
+    "objectID": "presentation.html#biomarkers-help-but-may-require-adjustment-for-ethnicity",
+    "href": "presentation.html#biomarkers-help-but-may-require-adjustment-for-ethnicity",
+    "title": "Preeclampsia",
+    "section": "Biomarkers help, but may require adjustment for ethnicity",
+    "text": "Biomarkers help, but may require adjustment for ethnicity\n\n\n\n\n\n\n\n\n\n\n\nWright et al. (2023)"
+  },
+  {
+    "objectID": "presentation.html#west-african-gda-independent-risk-for-pe",
+    "href": "presentation.html#west-african-gda-independent-risk-for-pe",
+    "title": "Preeclampsia",
+    "section": "West African GDA: independent risk for PE",
+    "text": "West African GDA: independent risk for PE\n\nConti-Ramsden et al. (2024)"
+  },
+  {
+    "objectID": "presentation.html#research-questions",
+    "href": "presentation.html#research-questions",
+    "title": "Preeclampsia",
+    "section": "Research questions",
+    "text": "Research questions\n\n\nIs there an independent association between GDA and levels of an angiogenic biomarker (PAPP-A)?\n\n\n\n\nIf so, which ancestry group(s)?\n\n\n\n\nCan adjustment for GDA offer improved predictive utility for preeclampsia versus ethnicity alone?"
+  },
+  {
+    "objectID": "presentation.html#methods-sample",
+    "href": "presentation.html#methods-sample",
+    "title": "Preeclampsia",
+    "section": "Methods: sample",
+    "text": "Methods: sample\n\n\nCase-Control sample (n = 5,207 after genomic QC)\n\n\n\n\n Harris Birthright Cohort\n\n\n\n\nFirst trimester recruitment with follow-up to delivery\n\n\n\n\nCase definition: early onset preeclampsia (n = 2,127)\n\n\n\n\nControl definition: normotensive (n = 3,080)"
+  },
+  {
+    "objectID": "presentation.html#methods-genomics",
+    "href": "presentation.html#methods-genomics",
+    "title": "Preeclampsia",
+    "section": "Methods: genomics",
+    "text": "Methods: genomics\n\n\nGenotyping (Illumina GSA v3)\n\n~700,000 variants optimised for admixed populations\n\n\n\nCalling (Illumina GenCall)\n \n\n\nQC (Plink 1.9)\n\nSex discordance\nCryptic relatedness\nAutosomal SNPs \\(&lt; 5\\%\\) missing & MAF \\(&gt; 1\\%\\)\nPopulation aggregated HWE P-value \\(&gt; 10^{-4}\\)"
+  },
+  {
+    "objectID": "presentation.html#methods-genetically-determined-ancestry",
+    "href": "presentation.html#methods-genetically-determined-ancestry",
+    "title": "Preeclampsia",
+    "section": "Methods: genetically determined ancestry",
+    "text": "Methods: genetically determined ancestry\n\n\nSupervised ADMIXTURE v1.3 (1000G reference)\n\n\n\n\nGDA: proportions sum to 1\n\n\n\n\n26 populations (e.g. Yoruba)\n5 superpopulations (e.g. African)\nAfrican regional populations (e.g. West African)"
+  },
+  {
+    "objectID": "presentation.html#statistical-analysis",
+    "href": "presentation.html#statistical-analysis",
+    "title": "Preeclampsia",
+    "section": "Statistical Analysis",
+    "text": "Statistical Analysis\n\n\nInference & feature selection\n\nWeighting by inverse probability of selection\nLeast Absolute Shrinkage and Selection Operator\n\n\n\nAdjustment:\n\nUnweighted LASSO among controls\n\\(MoM(\\) PAPP-A \\()_i = \\frac{y_i}{\\hat{y}_i}\\)\n\n\n\nPrediction:\n\nUnivariate weighted logistic regression\n(AU)ROC, bootstrap CI estimation (n = 2000)"
+  },
+  {
+    "objectID": "presentation.html#results-admixture",
+    "href": "presentation.html#results-admixture",
+    "title": "Preeclampsia",
+    "section": "Results: admixture",
+    "text": "Results: admixture\n\nGenetically estimated ancestry proportions among study cohort (n = 5207)."
+  },
+  {
+    "objectID": "presentation.html#results-admixture-1",
+    "href": "presentation.html#results-admixture-1",
+    "title": "Preeclampsia",
+    "section": "Results: admixture",
+    "text": "Results: admixture\n\nScaled density of genetically estimated ancestry proportions among study cohort (n = 5207)."
+  },
+  {
+    "objectID": "presentation.html#results-admixture-2",
+    "href": "presentation.html#results-admixture-2",
+    "title": "Preeclampsia",
+    "section": "Results: admixture",
+    "text": "Results: admixture\n\nSankey plot showing the reclassification of self-reported ethnicity by overall sample proportions of genetic ancestry estimates."
+  },
+  {
+    "objectID": "presentation.html#results-papp-a-discrimination",
+    "href": "presentation.html#results-papp-a-discrimination",
+    "title": "Preeclampsia",
+    "section": "Results: PAPP-A discrimination",
+    "text": "Results: PAPP-A discrimination\n\nDensity of log10(PAPP-A) level in cases and controls by self reported ethnicity and strata of individual proportion of African superpopulation ancestry. Red line indicates cutoff defined by a 10% screen positive rate in the overall sample."
+  },
+  {
+    "objectID": "presentation.html#results-effects-on-papp-a",
+    "href": "presentation.html#results-effects-on-papp-a",
+    "title": "Preeclampsia",
+    "section": "Results: effects on PAPP-A",
+    "text": "Results: effects on PAPP-A\n\nEstimated OLS effects on log10(PAPP-A) of predictors selected by LASSO regression."
+  },
+  {
+    "objectID": "presentation.html#results-prediction-performance",
+    "href": "presentation.html#results-prediction-performance",
+    "title": "Preeclampsia",
+    "section": "Results: prediction performance",
+    "text": "Results: prediction performance\n\nReceiver operator curves for the accuracy of preeclampsia prediction by univariate logistic regression of MoM(PAPP-A)."
+  },
+  {
+    "objectID": "presentation.html#results-prediction-performance-1",
+    "href": "presentation.html#results-prediction-performance-1",
+    "title": "Preeclampsia",
+    "section": "Results: prediction performance",
+    "text": "Results: prediction performance\n\n\n\n\n\n\nIncremental comparison of the overall performance of screening for preeclampsia by PAPP-A, adjusted by different features.\n\n\nAdjustment method\nAUROC\n95% CI1\np2\n\n\n\n\nEGA + weight\n0.588\n(0.573-0.604)\nNA\n\n\nEGA\n0.621\n(0.606-0.637)\n&lt;0.001\n\n\nEGA + GDA\n0.624\n(0.608-0.639)\n&lt;0.001\n\n\nEGA + SRE\n0.634\n(0.619-0.650)\n&lt;0.001\n\n\nEGA + SRE + GDA\n0.636\n(0.621-0.651)\n&lt;0.001\n\n\n\nEGA: estimated gestational age; GDA: genetically determined ancestry; SRE: self-reported ethnicity\n\n\nAUROC: area under receiver operating curve\n\n\n1 Bootstrap estimation of the 95% confidence interval of the AUROC (2000 replicates)\n\n\n2 Bootstrap test for the difference between successive AUROC curves (2000 replicates)"
+  },
+  {
+    "objectID": "presentation.html#results-prediction-performance-2",
+    "href": "presentation.html#results-prediction-performance-2",
+    "title": "Preeclampsia",
+    "section": "Results: prediction performance",
+    "text": "Results: prediction performance\n\n\n\n\n\n\nPerformance of fixed-cutoff screening for preeclampsia by PAPP-A, adjusted by different features. Cutoffs are fixed to achieve a screen positive rate of 50% among White women.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPAPP-A adjustment method\n\n\n\nEthnicity\n\nEGA\n\n\nEGA + GDA\n\n\nEGA + SRE\n\n\nEGA + SRE + GDA\n\n\n\nSPR\nDR\n95% CI\nSPR\nDR\n95% CI\nSPR\nDR\n95% CI\nSPR\nDR\n95% CI\n\n\n\n\nWhite\n50.0%\n62.7%\n(60.2-65.2%)\n50.0%\n63.0%\n(60.3-65.3%)\n50.0%\n62.7%\n(60.2-65.3%)\n50.0%\n63.0%\n(60.4-65.6%)\n\n\nBlack\n27.4%\n35.7%\n(32.5-39.1%)\n30.2%\n39.6%\n(36.1-43.0%)\n47.0%\n56.8%\n(53.3-60.3%)\n49.9%\n59.6%\n(56.0-63.0%)\n\n\n\nEGA: estimated gestational age; GDA: genetically determined ancestry; SRE: self-reported ethnicity\n\n\nSPR: screen-positive rate; DR: detection rate (sensitivity)"
+  },
+  {
+    "objectID": "presentation.html#strengths",
+    "href": "presentation.html#strengths",
+    "title": "Preeclampsia",
+    "section": "Strengths",
+    "text": "Strengths\n\n\nHonigberg et al. (2023)"
+  },
+  {
+    "objectID": "presentation.html#limitations",
+    "href": "presentation.html#limitations",
+    "title": "Preeclampsia",
+    "section": "Limitations",
+    "text": "Limitations\n\n\nAscertainment bias\n\n\n\n\nGDA ≈ SRE in this sample (Pearson r = 0.885 [p &lt; 0.001])\n\n\n\n\nPAPP-A ≠ PlGF\n\n\n\n\nGDA itself is a limited proxy for population structure"
+  },
+  {
+    "objectID": "presentation.html#thank-you",
+    "href": "presentation.html#thank-you",
+    "title": "Preeclampsia",
+    "section": "Thank you",
+    "text": "Thank you\n\nSupervisors:\n\nDr Antonio de Marvao\nDr Fran Conti-Ramsden (post-doc. QC & ADMIXTURE)\n\nCollaborators:\n\nProf Kypros Nicolaides (funding, cohort)\nDr Pirro Hysi (genotype calling)"
+  },
+  {
+    "objectID": "presentation.html#references",
+    "href": "presentation.html#references",
+    "title": "Preeclampsia",
+    "section": "References",
+    "text": "References\n\n\n\n\nConti-Ramsden, F., A. de Marvao, C. Gill, L. C. Chappell, J. Myers, D. Vuckovic, A. Dehghan, and P. G. Hysi. 2024. “Association of Genetic Ancestry with Pre-Eclampsia in Multi-Ethnic Cohorts of Pregnant Women.” Pregnancy Hypertens 38 (December): 101162. https://doi.org/10.1016/j.preghy.2024.101162.\n\n\nHollier, Lisa M., Ashley Busacker, Fanny Njie, Carla Syverson, and David A. Goodman. 2024. “Pregnancy-Related Deaths Due to Hemorrhage: Pregnancy Mortality Surveillance System, 20122019.” Obstetrics & Gynecology 144 (2): 252–55. https://doi.org/10.1097/AOG.0000000000005628.\n\n\nHonigberg, Michael C., Buu Truong, Raiyan R. Khan, Brenda Xiao, Laxmi Bhatta, Ha My T. Vy, Rafael F. Guerrero, et al. 2023. “Polygenic Prediction of Preeclampsia and Gestational Hypertension.” Nature Medicine 29 (6): 1540–49. https://doi.org/10.1038/s41591-023-02374-9.\n\n\nKnight, Marian, Allison Felker, Roshni Patel, Rohit Kotnis, and Sara Kenyon. 2025. “Saving Lives, Improving Mothers’ Care: Lessons Learned to Inform Maternity Care from the UK and Ireland Confidential Enquiries into Maternal Deaths and Morbidity 2021-23.” https://ora.ox.ac.uk/objects/uuid:5d6c56bc-17ee-49d8-8702-8f235102479b.\n\n\nRolnik, Daniel L., David Wright, Liona C. Poon, Neil O’Gorman, Argyro Syngelaki, Catalina De Paco Matallana, Ranjit Akolekar, et al. 2017. “Aspirin Versus Placebo in Pregnancies at High Risk for Preterm Preeclampsia.” New England Journal of Medicine 377 (7): 613–22. https://doi.org/10.1056/NEJMoa1704559.\n\n\nShafiq, Yasir, Marta Caviglia, Zainab Juheh Bah, Francesca Tognon, Michele Orsi, Abibatu K. Kamara, Caracciolo Claudia, et al. 2024. “Causes of Maternal Deaths in Sierra Leone from 2016 to 2019: Analysis of Districts’ Maternal Death Surveillance and Response Data.” BMJ Open 14 (1): e076256. https://doi.org/10.1136/bmjopen-2023-076256.\n\n\nWright, A., P. von Dadelszen, L. A. Magee, A. Syngelaki, R. Akolekar, D. Wright, and K. H. Nicolaides. 2023. “Effect of Race on the Measurement of Angiogenic Factors for Prediction and Diagnosis of Pre-Eclampsia.” BJOG 130 (1): 78–87. https://doi.org/10.1111/1471-0528.17296."
+  }
+]
